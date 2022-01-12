@@ -1,6 +1,6 @@
 //video4 Banco. Pragma es la versión en la que va a pasar el compilador de Solidity. En
-este caso la 0.4.17 Todo lo que empieza por // son comentarios y el compilador no los
-tiene en cuenta. Se utilizan para comentar el programa //
+//este caso la 0.4.17 Todo lo que empieza por // son comentarios y el compilador no los
+//tiene en cuenta. Se utilizan para comentar el programa //
 pragma solidity ^0.4.17;
 
 // definición del objeto Banco. Es el contrato inteligente
@@ -22,7 +22,7 @@ owner = _newOwner;
 }
 
 //retorno de la dirección de un solo propietario, esto se hace para que nadie pueda
-quitarle la dirección porque estas funciones son públicas
+//quitarle la dirección porque estas funciones son públicas
 function getOwner() view public returns(address){
 return owner;
 }
@@ -41,4 +41,4 @@ require(msg.value == amount);
 function withdrawBalance() public onlyOwner {
 msg.sender.transfer(address(this).balance);
 }
-} // cierra el objeto Ban
+} // cierra el objeto Banco
