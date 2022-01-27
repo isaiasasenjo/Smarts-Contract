@@ -1,3 +1,6 @@
+// SPDX-License-Identifier: MIT
+pragma solidity ^0.8.0;
+
 contract SimpleICO {
   uint256 public totalSupply = 10**22;
   uint256 public tokenSwap = 10; // tokens per wei, 1000 Ethers
