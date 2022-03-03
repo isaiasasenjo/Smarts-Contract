@@ -1,7 +1,7 @@
 SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.4.0;
 
-//primer contrato
+//primer contrato mortal
 contract mortal{
 	address owner;
 	// Inicializa el contrato con la variable owner
@@ -14,7 +14,7 @@ contract mortal{
     }
 }
 
-// segundo contrato
+// segundo contrato greeter que es una variable del contrato mortal
 contract greeter is mortal {
 	string greeting;
 	
