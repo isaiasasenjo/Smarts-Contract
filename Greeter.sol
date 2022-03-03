@@ -1,10 +1,15 @@
 SPDX-License-Identifier: GPL-3.0
+pragma solidity ^0.4.0;
 contract mortal{
 	address owner;
 	// Inicializa el contrato con la variable owner
-	function mortal() {owner = msg.sender;}
+	function mortal(){
+        owner = msg.sender;
+        }
 	// functio to recover the funds on the contract
-	function kill() {if(msg == owner) selfdestruct(owner);}
+	function kill(){
+        if((msg == owner) selfdestruct(owner));
+    }
 }
 
 contract greeter is mortal {
@@ -14,7 +19,7 @@ contract greeter is mortal {
 		greeting = _greeting;
 	}
 	
-	function greet() constant returns (string){
+	function greet()  returns (string){
 		return greeting;
 	}
 }
