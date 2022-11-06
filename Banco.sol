@@ -2,6 +2,7 @@
 //video4 Banco. Pragma es la versión en la que va a pasar el compilador de Solidity. En
 //este caso la 0.4.17 Todo lo que empieza por // son comentarios y el compilador no los
 //tiene en cuenta. Se utilizan para comentar el programa //
+//SPDX-License-Identifier: GPL-3.0
 pragma solidity ^0.4.17;
 
 // definición del objeto Banco. Es el contrato inteligente
@@ -11,7 +12,7 @@ address owner;  //owner es el dueño
 //la siguiente funcion construye el objeto Banco. 
 //payable significa que esa función puede retornar dinero
 // owner tiene la cuenta del propietario msg.sender
-function Banco() payable public{
+function  Banco1() payable public{
     owner = msg.sender;  // de esta forma owner tiene la Pk de owner
 }
 //modifier no es una función al uso, por eso no lleva ()
